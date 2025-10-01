@@ -1,0 +1,34 @@
+* {
+	background-color: #111;
+	color: #eee;
+	white-space: pre;
+}
+
+button {
+	all: unset;
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+}
+
+table {
+	margin: auto;
+	border: 1px solid #666;
+	border-collapse: collapse;
+}
+
+th,
+td {
+	padding: 12px 15px;
+	border: 1px solid #666;
+	text-align: left;
+	text-wrap: nowrap;
+}
+th {
+	background-color: #222;
+}
+tr:nth-child(even) {
+	background-color: #222;
+}
