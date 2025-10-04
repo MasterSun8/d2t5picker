@@ -9,23 +9,194 @@
 	<body>
 		<h1>Destiny 2 Tier 5 Armor Picker</h1>
 
-		<table id="results">
-			<thead>
-				<tr>
-					<th>Combination</th>
-					<th>Health</th>
-					<th>Melee</th>
-					<th>Grenade</th>
-					<th>Class</th>
-					<th>Super</th>
-					<th>Weapons</th>
-					<th>Mods</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr></tr>
-			</tbody>
-		</table>
+		<div class="content">
+			<div class="sliders">
+				<datalist id="ticks">
+					<option value="0"></option>
+					<option value="50"></option>
+					<option id="regen100" value="70"></option>
+					<option value="100"></option>
+					<option value="150"></option>
+					<option value="200"></option>
+				</datalist>
+				<div class="slider">
+					<div class="slider-label">Health</div>
+					<div class="sliderValueContainer">
+						<input
+							type="range"
+							id="health"
+							list="ticks"
+							name="health"
+							min="0"
+							max="200"
+							value="0"
+							step="1"
+							oninput="healthValue.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+						<input
+							type="number"
+							min="0"
+							max="200"
+							id="healthValue"
+							value="0"
+							oninput="health.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slider-label">Melee</div>
+					<div class="sliderValueContainer">
+						<input
+							type="range"
+							id="melee"
+							list="ticks"
+							name="melee"
+							min="0"
+							max="200"
+							value="0"
+							oninput="meleeValue.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+						<input
+							type="number"
+							min="0"
+							max="200"
+							id="meleeValue"
+							value="0"
+							oninput="melee.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slider-label">Grenade</div>
+					<div class="sliderValueContainer">
+						<input
+							type="range"
+							id="grenade"
+							list="ticks"
+							name="grenade"
+							min="0"
+							max="200"
+							value="0"
+							oninput="grenadeValue.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+						<input
+							type="number"
+							min="0"
+							max="200"
+							id="grenadeValue"
+							value="0"
+							oninput="grenade.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slider-label">Class</div>
+					<div class="sliderValueContainer">
+						<input
+							type="range"
+							id="classVal"
+							list="ticks"
+							name="classVal"
+							min="0"
+							max="200"
+							value="0"
+							oninput="classValue.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+						<input
+							type="number"
+							min="0"
+							max="200"
+							id="classValue"
+							value="0"
+							oninput="classVal.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slider-label">Super</div>
+					<div class="sliderValueContainer">
+						<input
+							type="range"
+							id="superVal"
+							list="ticks"
+							name="super"
+							min="0"
+							max="200"
+							value="0"
+							oninput="superValue.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+						<input
+							type="number"
+							min="0"
+							max="200"
+							id="superValue"
+							value="0"
+							oninput="superVal.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+					</div>
+				</div>
+				<div class="slider">
+					<div class="slider-label">Weapons</div>
+					<div class="sliderValueContainer">
+						<input
+							type="range"
+							id="weapons"
+							list="ticks"
+							name="weapons"
+							min="0"
+							max="200"
+							value="0"
+							oninput="weaponsValue.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+						<input
+							type="number"
+							min="0"
+							max="200"
+							id="weaponsValue"
+							value="0"
+							oninput="weapons.value = this.value"
+							onfocusout="listCombinations(...getStats())"
+						/>
+					</div>
+				</div>
+				<div
+					class="checkboxes"
+					onclick="listCombinations(...getStats())"
+				>
+					<button id="generate">Generate</button>
+				</div>
+			</div>
+			<div class="tableContainer">
+				<table id="results">
+					<thead>
+						<tr>
+							<th>Health</th>
+							<th>Melee</th>
+							<th>Grenade</th>
+							<th>Class</th>
+							<th>Super</th>
+							<th>Weapons</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th colspan="6">Pick the combination you need!</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
 
 		<script src="./main.js"></script>
 	</body>

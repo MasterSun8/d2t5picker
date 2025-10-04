@@ -1,34 +1,152 @@
 * {
-	background-color: #111;
+	background-color: #080808;
 	color: #eee;
 	white-space: pre;
-}
-
-button {
-	all: unset;
-	width: 100%;
+	font-family: "Courier New", Courier, monospace;
 }
 
 h1 {
 	text-align: center;
 }
 
+* / h1 {
+	font-size: 16px;
+}
+
 table {
-	margin: auto;
-	border: 1px solid #666;
+	background-color: #fff;
+}
+
+table {
 	border-collapse: collapse;
+	border-spacing: 1px;
+	margin: 10px;
 }
 
 th,
 td {
-	padding: 12px 15px;
-	border: 1px solid #666;
-	text-align: left;
+	padding: 10px;
+	text-align: center;
 	text-wrap: nowrap;
 }
 th {
-	background-color: #222;
+	background-color: #111;
 }
 tr:nth-child(even) {
+	background-color: #111;
+}
+
+.tableContainer {
 	background-color: #222;
+	border-radius: 1vh;
+	margin: 10px;
+}
+
+.sliders {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	flex-direction: column;
+	margin: 10px;
+	align-items: stretch;
+	align-content: center;
+	background-color: #222;
+	border-radius: 1vh;
+	height: fit-content;
+}
+
+.slider {
+	background-color: inherit;
+	display: flex;
+	margin: 10px;
+	justify-content: space-between;
+}
+
+.slider-label {
+	text-align: left;
+	margin-right: 10px;
+	background-color: inherit;
+}
+
+.sliderValueContainer {
+	display: flex;
+	text-align: right;
+	margin-left: 10px;
+	background-color: inherit;
+}
+
+input[type="range"] {
+	margin-right: 10px;
+	align-items: right;
+	accent-color: #ffb6c1;
+	width: 300px;
+}
+
+.checkbox {
+	display: flex;
+	text-align: center;
+	width: fit-content;
+	align-items: center;
+	align-content: center;
+	flex-direction: column;
+	background-color: inherit;
+}
+
+.checkboxes {
+	margin: 10px;
+	background-color: inherit;
+	display: flex;
+	justify-content: space-around;
+}
+
+.content {
+	display: flex;
+}
+
+datalist {
+	color: black;
+}
+
+span {
+	background-color: inherit;
+}
+
+button {
+	background-color: #111;
+	border: none;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	border-radius: 8px;
+}
+
+button:hover {
+	background-color: #333;
+}
+
+button:active {
+	background-color: #000;
+}
+
+label {
+	cursor: pointer;
+	user-select: none;
+	background-color: inherit;
+}
+
+input[type="number"] {
+	width: 64px;
+	background-color: #111;
+	color: #eee;
+	border: 0px solid #666;
+	border-radius: 4px;
+	text-align: right;
+}
+
+#health {
+	/* accent-color: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);; */
 }
